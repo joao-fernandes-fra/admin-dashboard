@@ -2,10 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App'
-import './index.css'
-import { CreateProduct } from './routes/Product/create.product'
 import OptionsBar from './components/Optionsbar'
 import { sidebarOptions } from './components/SideBar/sidebar.options'
+import './index.css'
 
 
 const router = createBrowserRouter([
