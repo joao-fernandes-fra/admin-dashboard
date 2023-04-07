@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .options-bar {
+    @apply w-80 h-screen m-0 ml-16 bg-gray-200 dark:bg-gray-800
+     overflow-hidden;
+  }
+  
+  .topics-container {
+    @apply flex flex-col items-start
+    p-1 m-0;
+  }
+  
+  .options-block {
+    @apply flex items-center justify-center 
+    h-16 
+    m-0 p-0;
+  }
+  
+  .options-block-text {
+    @apply text-lg tracking-wider font-bold self-start
+    text-gray-600 dark:text-gray-400 
+    mr-auto ml-4 my-auto align-middle;
+  }
+
+  .topic-title {
+    @apply flex flex-row items-center justify-around mx-0 text-gray-500
+    cursor-pointer;
+  }
+  
+  .topic-title-text {
+    @apply text-gray-500  text-opacity-90
+    text-lg font-semibold
+    cursor-default;
+  }
+
+  .topic-title-text-selected {
+    @apply text-blue-500 text-opacity-90 text-lg font-bold;
+  }
+  
+  .topic-header-icon {
+    @apply text-blue-500 text-opacity-90 text-lg font-bold mx-5;
+  }
+}
