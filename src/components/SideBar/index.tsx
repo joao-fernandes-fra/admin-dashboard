@@ -1,5 +1,6 @@
 import { BiExit } from 'react-icons/bi'
 import { BsGearFill } from 'react-icons/bs'
+import { ReactElement } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import "./index.css"
 import { sidebarOptions } from './sidebar.options'
@@ -31,14 +32,16 @@ const SideBar = () => {
   )
 }
 
-const SidebarIcon = ({ icon, tooltip = '', path = '' }) => {
+interface SideBarIconParams { icon?: ReactElement, tooltip?: string, path?: string }
+
+const SidebarIcon = (params: SideBarIconParams) => {
   const navigate = useNavigate();
   return (
-    <Link className="sidebar-icon group" to={path}>
-      {icon}
-      {tooltip &&
+    <Link className="sidebar-icon group" to={params.path as string}>
+      {params.icon}
+      {params.tooltip &&
         <div className="tooltip group-hover:scale-100">
-          {tooltip}
+          {params.tooltip}
         </div>}
     </Link>
   )
